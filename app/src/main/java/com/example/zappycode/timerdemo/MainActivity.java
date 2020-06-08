@@ -19,14 +19,14 @@ public class MainActivity extends AppCompatActivity {
 //        Method 1 - preferred
         new CountDownTimer(10000, 1000) { //starts from 10th second, goes down every 1 second
 
-            public void onTick(long millisecondsUntilDone) {
-                Log.i("Seconds Left!", String.valueOf(millisecondsUntilDone / 1000)); //what to do every second
+            public void onTick(long millisecondsUntilDone) { //what to do every second
+                Log.i("Seconds Left!", String.valueOf(millisecondsUntilDone / 1000));
             }
 
-            public void onFinish() {
-                Log.i("We're done!", "No more countdown"); //once countdown ends
+            public void onFinish() { //once the countdown ends
+                Log.i("We're done!", "No more countdown");
             }
-        }.start(); //this is start the countdown
+        }.start(); //this starts the countdown
 
 
 //        Method 2 - combination of handler and runnable
